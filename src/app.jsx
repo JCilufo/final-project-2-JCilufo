@@ -1,3 +1,7 @@
+import Header from './components/header'
+import SpeciesGrid from './components/species-grid/index'
+import { useState, useEffect } from 'react'
+
 export default function App() {
   return (
     <main>
