@@ -12,6 +12,15 @@ const options = {
 }
 
 export default function App() {
+  const [species, setSpecies] = useState([])
+
+  useEffect(() => {
+    fetch('https://ghibliapi.vercel.app/species')
+      .then((response) => response.json())
+      .then((data) => setSpecies(data))
+      .catch((error) => console.error('Error fetching species:', error))
+  }, [])
+
   return (
     <main>
       <h1 className="text-3xl text-red-500">Hello, World!</h1>
